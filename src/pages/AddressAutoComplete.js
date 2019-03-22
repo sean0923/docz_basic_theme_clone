@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
@@ -12,21 +11,13 @@ import Input from '../components/common/Input';
 // -----------------------------------------------------------------------------------------
 import useAutoCompleteForm from '../hooks/useAutoCompleteForm';
 
-// -----------------------------------------------------------------------------------------
-// ---------------------------------- Styled Components ------------------------------------
-// -----------------------------------------------------------------------------------------
-const Box = styled.div`
-	height: 10px;
-	background-color: red;
-`;
-
 const AddressAutoComplete = () => {
 	const { formValues, populateValues, handleChange } = useAutoCompleteForm();
 
 	return (
 		<div>
 			<GooglePlaceAutoComplete
-        street="street"
+				street="street"
 				formValues={formValues}
 				handleChange={handleChange}
 				populateValues={populateValues}
@@ -42,8 +33,6 @@ const AddressAutoComplete = () => {
 					/>
 				);
 			})}
-
-			<Box />
 		</div>
 	);
 };
