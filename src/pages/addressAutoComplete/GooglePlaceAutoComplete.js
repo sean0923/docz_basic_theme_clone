@@ -18,7 +18,7 @@ class GooglePlaceAutoComplete extends Component {
 	};
 
 	render() {
-		const { formValues, handleChange } = this.props;
+		const { formValues, handleChange, street } = this.props;
 
 		return (
 			<PlacesAutocomplete
@@ -29,8 +29,8 @@ class GooglePlaceAutoComplete extends Component {
 				{({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
 					<div>
 						<Input
-							label="street"
-							name="street"
+							label={street}
+							name={street}
 							{...getInputProps({
 								placeholder: 'Search Places ...',
 								className: 'location-search-input',

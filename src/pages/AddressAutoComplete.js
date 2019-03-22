@@ -25,7 +25,13 @@ const AddressAutoComplete = () => {
 
 	return (
 		<div>
-			{[ 'street', 'city', 'state', 'postal_code' ].map((name) => {
+			<GooglePlaceAutoComplete
+        street="street"
+				formValues={formValues}
+				handleChange={handleChange}
+				populateValues={populateValues}
+			/>
+			{[ 'city', 'state', 'postal_code' ].map((name) => {
 				return (
 					<Input
 						key={name}
@@ -36,11 +42,7 @@ const AddressAutoComplete = () => {
 					/>
 				);
 			})}
-			<GooglePlaceAutoComplete
-				formValues={formValues}
-				handleChange={handleChange}
-				populateValues={populateValues}
-			/>
+
 			<Box />
 		</div>
 	);
