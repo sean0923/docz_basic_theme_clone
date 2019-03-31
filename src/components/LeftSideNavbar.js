@@ -6,20 +6,23 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 import TitleForNavbar from './leftSideNavbar/TitleForNavbar';
 import SearchInputForNavbar from './leftSideNavbar/SearchInputForNavbar';
+import NavItems from './leftSideNavbar/NavItems';
 
 // -----------------------------------------------------------------------------------------
 // ---------------------------------- Styled Components ------------------------------------
 // -----------------------------------------------------------------------------------------
-const Wrapper = styled.div`background-color: #f5f6f7;`;
+const Wrapper = styled.div`
+	
+  background-color: #f5f6f7;
+
+`;
 
 const LeftSideNavbar = () => {
 	return (
 		<Wrapper>
-			<TitleForNavbar text="Title" />
+			<TitleForNavbar text="Docz Clone" />
 			<SearchInputForNavbar />
-			<div>LeftSideNavbar</div>
-			<div>LeftSideNavbar</div>
-			<div>LeftSideNavbar</div>
+			<NavItems />
 		</Wrapper>
 	);
 };

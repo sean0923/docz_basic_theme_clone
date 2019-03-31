@@ -4,22 +4,21 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
-import InputForSearch from '../common/InputForSearch';
+import NavItem from './navItems/NavItem';
 
 // -----------------------------------------------------------------------------------------
 // ---------------------------------- Styled Components ------------------------------------
 // -----------------------------------------------------------------------------------------
-const Wrapper = styled.div`
-	/* height: 100%; */
-	padding: 24px;
-`;
+const Wrapper = styled.div`padding: 24px 0;`;
 
-const SearchForNavbar = () => {
+const NavItems = () => {
 	return (
-		<Wrapper className="test">
-			<InputForSearch placeholder="Search ..." />
+		<Wrapper>
+			{[ 1, 2, 3 ].map((item, idx) => {
+				return <NavItem key={idx} text={'text'} />;
+			})}
 		</Wrapper>
 	);
 };
 
-export default SearchForNavbar;
+export default NavItems;
