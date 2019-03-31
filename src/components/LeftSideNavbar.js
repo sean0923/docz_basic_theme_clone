@@ -4,32 +4,24 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
-import LeftSideNavbar from '../components/LeftSideNavbar';
-// import Navbar from '../components/Navbar';
+import TitleForNavbar from './leftSideNavbar/TitleForNavbar';
+import SearchInputForNavbar from './leftSideNavbar/SearchInputForNavbar';
 
 // -----------------------------------------------------------------------------------------
 // ---------------------------------- Styled Components ------------------------------------
 // -----------------------------------------------------------------------------------------
-const Wrapper = styled.div`
-	display: grid;
-	grid-template-columns: 280px 1fr;
-	/* padding: 24px; */
+const Wrapper = styled.div`background-color: #f5f6f7;`;
 
-	height: 100vh;
-`;
-
-const BodyWarpper = styled.div`
-	padding: 12px;
-	min-height: 800px;
-`;
-
-const LayoutMain = ({ children }) => {
+const LeftSideNavbar = () => {
 	return (
-		<Wrapper className="test">
-			<LeftSideNavbar />
-			<BodyWarpper className="test">{children}</BodyWarpper>
+		<Wrapper>
+			<TitleForNavbar text="Title" />
+			<SearchInputForNavbar />
+			<div>LeftSideNavbar</div>
+			<div>LeftSideNavbar</div>
+			<div>LeftSideNavbar</div>
 		</Wrapper>
 	);
 };
 
-export default LayoutMain;
+export default LeftSideNavbar;
