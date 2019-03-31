@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = ({ text }) => {
-	return <Wrapper className="test">{text}</Wrapper>;
+	return <Wrapper >{text}</Wrapper>;
 };
 
 export default Title;

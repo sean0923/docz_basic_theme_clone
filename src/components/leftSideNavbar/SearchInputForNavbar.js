@@ -10,13 +10,14 @@ import InputForSearch from '../common/InputForSearch';
 // ---------------------------------- Styled Components ------------------------------------
 // -----------------------------------------------------------------------------------------
 const Wrapper = styled.div`
-	/* height: 100%; */
 	padding: 24px;
+	border-top: 1px solid rgb(206, 212, 222);
+	border-bottom: 1px solid rgb(206, 212, 222);
 `;
 
 const SearchForNavbar = () => {
 	return (
-		<Wrapper className="test">
+		<Wrapper>
 			<InputForSearch placeholder="Search ..." />
 		</Wrapper>
 	);

@@ -11,11 +11,7 @@ import NavItems from './leftSideNavbar/NavItems';
 // -----------------------------------------------------------------------------------------
 // ---------------------------------- Styled Components ------------------------------------
 // -----------------------------------------------------------------------------------------
-const Wrapper = styled.div`
-	
-  background-color: #f5f6f7;
-
-`;
+const Wrapper = styled.div`background-color: #f5f6f7;`;
 
 const LeftSideNavbar = () => {
 	return (
