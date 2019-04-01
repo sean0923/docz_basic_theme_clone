@@ -3,16 +3,16 @@ import React from 'react';
 import { Router } from '@reach/router';
 
 // -----------------------------------------------------------------------------------------
-// ----------------------------------- Component Import ------------------------------------
+// ----------------------------------------- Data ------------------------------------------
 // -----------------------------------------------------------------------------------------
-import Home from './pages/Home';
-import AddressAutoComplete from './pages/AddressAutoComplete';
+import dataForNavbar from './data/dataForNavbar';
 
 const RouterMain = () => {
 	return (
 		<Router>
-			<Home path="/" />
-			<AddressAutoComplete path="/address-auto-complete" />
+			{dataForNavbar.map(({ Component, path }) => {
+				return <Component key={path} path={path} />;
+			})}
 		</Router>
 	);
 };

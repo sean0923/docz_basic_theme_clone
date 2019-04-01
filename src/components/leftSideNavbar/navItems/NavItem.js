@@ -1,10 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from '@reach/router';
 
 // -----------------------------------------------------------------------------------------
 // ---------------------------------- Styled Components ------------------------------------
 // -----------------------------------------------------------------------------------------
-const Wrapper = styled.div`
+const Wrapper = styled(Link)`
+  display: block;
+  text-decoration: none;
+  line-height: 1.6;
+
 	font-size: 20px;
 	color: black;
 	font-weight: bold;
@@ -15,8 +20,8 @@ const Wrapper = styled.div`
 	}
 `;
 
-const NavItem = ({ text }) => {
-	return <Wrapper>{text}</Wrapper>;
+const NavItem = ({ text, path }) => {
+	return <Wrapper to={path}>{text}</Wrapper>;
 };
 
 export default NavItem;

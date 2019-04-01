@@ -7,6 +7,11 @@ import styled from 'styled-components';
 import NavItem from './navItems/NavItem';
 
 // -----------------------------------------------------------------------------------------
+// ----------------------------------------- Data ------------------------------------------
+// -----------------------------------------------------------------------------------------
+import dataForNavbar from '../../data/dataForNavbar';
+
+// -----------------------------------------------------------------------------------------
 // ---------------------------------- Styled Components ------------------------------------
 // -----------------------------------------------------------------------------------------
 const Wrapper = styled.div`padding: 24px 0;`;
@@ -14,8 +19,8 @@ const Wrapper = styled.div`padding: 24px 0;`;
 const NavItems = () => {
 	return (
 		<Wrapper>
-			{[ 1, 2, 3 ].map((item, idx) => {
-				return <NavItem key={idx} text={'text'} />;
+			{dataForNavbar.map((item, idx) => {
+				return <NavItem key={idx} path={item.path} text={item.text} />;
 			})}
 		</Wrapper>
 	);
