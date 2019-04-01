@@ -2,13 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 // -----------------------------------------------------------------------------------------
+// ----------------------------------- Component Import ------------------------------------
+// -----------------------------------------------------------------------------------------
+import * as SvgIcons from './SvgIcons';
+
+// -----------------------------------------------------------------------------------------
 // ---------------------------------- Styled Components ------------------------------------
 // -----------------------------------------------------------------------------------------
 const Wrapper = styled.div`
 	font-size: 20px;
 	color: gray;
 	display: flex;
-	i {
+	svg {
 		margin-right: 8px;
 	}
 	height: 20px;
@@ -16,17 +21,15 @@ const Wrapper = styled.div`
 
 const InputWrapper = styled.input`
 	background-color: transparent;
-	/* background-color: rgba(255, 0, 0, .1); */
 	outline: none;
 	border: none;
-	/* font-size: 20px; */
 	width: 100%;
 `;
 
 const InputForSearch = ({ ...rest }) => {
 	return (
 		<Wrapper>
-			<i className="fas fa-search" />
+			<SvgIcons.search color="grey" hoverColor="red" width="20px" height="20px" />
 			<InputWrapper {...rest} />
 		</Wrapper>
 	);

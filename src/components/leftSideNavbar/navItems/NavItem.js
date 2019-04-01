@@ -12,7 +12,7 @@ const Wrapper = styled(Link)`
 
 	font-size: 20px;
 	color: black;
-	font-weight: bold;
+	font-weight: 600;
 	padding: 4px 24px;
 	cursor: pointer;
 	&:hover {
