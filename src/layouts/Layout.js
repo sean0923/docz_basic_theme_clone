@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
 import LeftSideNavbar from '../components/LeftSideNavbar';
-// import Navbar from '../components/Navbar';
+import RouterMain from '../RouterMain';
 
 // -----------------------------------------------------------------------------------------
 // ---------------------------------- Styled Components ------------------------------------
@@ -13,25 +13,22 @@ import LeftSideNavbar from '../components/LeftSideNavbar';
 const Wrapper = styled.div`
 	display: grid;
 	grid-template-columns: 280px 1fr;
-	/* padding: 24px; */
-
 	height: 100vh;
 `;
 
-const BodyWarpper = styled.div`
-	padding: 12px;
-	min-height: 800px;
+const BodyWrapper = styled.div`
+  padding: 0 40px 40px 40px;
 `;
 
-const LayoutMain = ({ children }) => {
+const Layout = () => {
 	return (
-		// <Wrapper className="test">
 		<Wrapper>
 			<LeftSideNavbar />
-			{/* <BodyWarpper className="test">{children}</BodyWarpper> */}
-			<BodyWarpper>{children}</BodyWarpper>
+			<BodyWrapper>
+				<RouterMain />
+			</BodyWrapper>
 		</Wrapper>
 	);
 };
 
-export default LayoutMain;
+export default Layout;

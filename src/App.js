@@ -4,16 +4,11 @@ import './App.css';
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
-import LayoutMain from './layouts/LayoutMain';
-import RouterMain from './RouterMain';
+import Layout from './layouts/Layout';
 
 class App extends Component {
 	render() {
-		return (
-			<LayoutMain>
-				<RouterMain />
-			</LayoutMain>
-		);
+		return <Layout />;
 	}
 }
 
