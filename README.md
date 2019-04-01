@@ -1,2 +1,4 @@
-# Sean's Small React Components
+# Docz Basic Theme Clone
+
+Practice coding by copying docz basic theme
 
